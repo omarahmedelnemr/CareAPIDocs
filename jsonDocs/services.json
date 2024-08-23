@@ -1,0 +1,135 @@
+[
+    {
+        "endpoint":"/service_types",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Types of Services, like Medical, Community",
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "خدمات تعليمية"
+            },
+            {
+                "id": 2,
+                "name": "خدمات مجتمعية"
+            },
+            {
+                "id": 3,
+                "name": "خدمات تجارية"
+            },
+            {
+                "id": 4,
+                "name": "خدمات ترفيهية"
+            },
+            {
+                "id": 5,
+                "name": "خدمات طبية"
+            }
+        ],
+        "responseDescription":"Receives The List of Service Types if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List",
+        "parameters":[
+            {
+                "paramName":"typeID",
+                "paramType":"Number",
+                "paramDescription":"The Selected Type for Services"
+            }    
+        ],
+        "requestExample":{
+            "typeID":5
+        },
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "صيدلية العزبي",
+                "image": "http://",
+                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
+            },
+            {
+                "id": 2,
+                "name": "صيدلية العزبي",
+                "image": "http://",
+                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
+            }
+        ],
+        "responseDescription":"Receives The List of Services if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services_city_filter",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List With a City Filter, like all Services in Cairo",
+        "parameters":[
+            {
+                "paramName":"typeID",
+                "paramType":"Number",
+                "paramDescription":"The Selected Type for Services"
+            },
+            {
+                "paramName":"city",
+                "paramType":"string",
+                "paramDescription":"The Name of the Selected City"
+            }  
+        ],
+        "requestExample":{
+            "typeID":5,
+            "city":"cairo"
+        },
+        "responseExample":[
+            {
+                "id": 2,
+                "name": "صيدلية العزبي",
+                "image": "http://",
+                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
+            }
+        ],
+        "responseDescription":"Receives The List of Services in the City if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/service_info",
+        "section":"service",
+        "method":"GET",
+        "description":"Get The Details about a Service, all info and Addresses",
+        "parameters":[
+            {
+                "paramName":"serviceID",
+                "paramType":"Number",
+                "paramDescription":"The ID of the Service"
+            } 
+        ],
+        "requestExample":{
+            "serviceID":5
+        },
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "صيدلية العزبي",
+                "image": "http://",
+                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر",
+                "addresses": [
+                    {
+                        "id": 1,
+                        "name": "عنوان رقم 1",
+                        "city": "cairo",
+                        "gpsLocation": "http://",
+                        "phone": "011"
+                    },
+                    {
+                        "id": 2,
+                        "name": "عنوان رقم 2",
+                        "city": "alex",
+                        "gpsLocation": "http://",
+                        "phone": "011"
+                    }
+                ]
+            }
+        ],
+        "responseDescription":"Receives Info of a Service if every Thing Went Well, or one of the Common Errors"
+    }
+    
+]
