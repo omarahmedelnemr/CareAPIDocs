@@ -29,72 +29,183 @@
         "responseDescription":"Receives The List of Service Types if every Thing Went Well, or one of the Common Errors"
     },
     {
-        "endpoint":"/services",
+        "endpoint":"/service_providers",
         "section":"service",
         "method":"GET",
-        "description":"Get All Services List",
+        "description":"Get All Service Providers List Related to a Type",
+        "responseExample":[
+            {
+                "id": 25,
+                "name": "كاريتاس مصر",
+                "image": "https://www11.0zz0.com/2024/07/13/08/168900831.png ",
+                "description": null
+            },
+            {
+                "id": 11,
+                "name": "برنامج الغذاء العالمي WFP",
+                "image": "https://www12.0zz0.com/2024/07/13/10/516354618.png ",
+                "description": null
+            },
+            {
+                "id": 10,
+                "name": "المنظمة الدولية للهجرة IOM",
+                "image": "https://www12.0zz0.com/2024/07/13/10/166613239.png ",
+                "description": null
+            },
+            {
+                "id": 48,
+                "name": "مركز بشائر القران ",
+                "image": "https://www11.0zz0.com/2024/07/14/01/932234911.png ",
+                "description": null
+            },
+            {
+                "id": 85,
+                "name": "المركز السوداني التعليمي ",
+                "image": null,
+                "description": null
+            },
+            {
+                "id": 13,
+                "name": "جمعية الرواد لتنمية المجتمع ",
+                "image": "https://www5.0zz0.com/2024/07/13/11/480858524.png ",
+                "description": null
+            },
+            {
+                "id": 49,
+                "name": "مركز تنمية المواهب المجتمعي",
+                "image": "https://www8.0zz0.com/2024/07/14/01/245609343.png ",
+                "description": null
+            }
+        ],
+        "responseDescription":"Receives The List of Service Providers if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services_full",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List For a Provider With All Details",
         "parameters":[
             {
-                "paramName":"typeID",
+                "paramName":"providerID",
                 "paramType":"Number",
-                "paramDescription":"The Selected Type for Services"
+                "paramDescription":"The Selected Provider"
             }    
         ],
         "requestExample":{
-            "typeID":5
+            "providerID":11
         },
         "responseExample":[
             {
-                "id": 1,
-                "name": "صيدلية العزبي",
-                "image": "http://",
-                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
-            },
-            {
                 "id": 2,
-                "name": "صيدلية العزبي",
-                "image": "http://",
-                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
+                "name": "قسائم غذائية ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين الأكثر احتياجاً وأولئك الذين يعانون من انعدام الأمن الغذائي المسجلين لدى المفوضية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "provider": {
+                    "id": 11,
+                    "name": "برنامج الغذاء العالمي WFP",
+                    "image": "https://www12.0zz0.com/2024/07/13/10/516354618.png\r",
+                    "description": null
+                },
+                "type": {
+                    "id": 2,
+                    "name": "خدمات مجتمعية"
+                },
+                "addresses": [
+                    {
+                        "id": 3,
+                        "name": "الدقي",
+                        "city": "الجيزة",
+                        "working_hours": "الأحد – الخميس  9:00 ص – 3:00 م\r",
+                        "lat": "30.04286927",
+                        "lng": "31.21193463\r",
+                        "phones": [
+                            {
+                                "id": 3,
+                                "phone": "0225299830"
+                            },
+                            {
+                                "id": 4,
+                                "phone": "01023646706"
+                            },
+                            {
+                                "id": 5,
+                                "phone": "08005555222"
+                            }
+                        ]
+                    }
+                ]
             }
         ],
         "responseDescription":"Receives The List of Services if every Thing Went Well, or one of the Common Errors"
     },
     {
-        "endpoint":"/services_city_filter",
+        "endpoint":"/services",
         "section":"service",
         "method":"GET",
-        "description":"Get All Services List With a City Filter, like all Services in Cairo",
+        "description":"Get All Services List with General Info",
         "parameters":[
             {
-                "paramName":"typeID",
+                "paramName":"providerID",
                 "paramType":"Number",
-                "paramDescription":"The Selected Type for Services"
-            },
-            {
-                "paramName":"city",
-                "paramType":"string",
-                "paramDescription":"The Name of the Selected City"
-            }  
+                "paramDescription":"The Selected Provider"
+            }    
         ],
         "requestExample":{
-            "typeID":5,
-            "city":"cairo"
+            "providerID":5
         },
         "responseExample":[
             {
                 "id": 2,
-                "name": "صيدلية العزبي",
-                "image": "http://",
-                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر"
+                "name": "قسائم غذائية ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين الأكثر احتياجاً وأولئك الذين يعانون من انعدام الأمن الغذائي المسجلين لدى المفوضية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "provider": {
+                    "id": 11,
+                    "name": "برنامج الغذاء العالمي WFP",
+                    "image": "https://www12.0zz0.com/2024/07/13/10/516354618.png\r",
+                    "description": null
+                },
+                "type": {
+                    "id": 2,
+                    "name": "خدمات مجتمعية"
+                }
+            },
+            {
+                "id":3,
+                "name": "قسائم غذائية ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين الأكثر احتياجاً وأولئك الذين يعانون من انعدام الأمن الغذائي المسجلين لدى المفوضية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "provider": {
+                    "id": 12,
+                    "name": "ادارة  تعليم برج العرب الجديدة",
+                    "image": "https://www10.0zz0.com/2024/07/13/07/944285666.png",
+                    "description": null
+                },
+                "type": {
+                    "id": 2,
+                    "name": "خدمات مجتمعية"
+                }
             }
         ],
-        "responseDescription":"Receives The List of Services in the City if every Thing Went Well, or one of the Common Errors"
+        "responseDescription":"Receives The List of Services if every Thing Went Well, or one of the Common Errors"
     },
     {
         "endpoint":"/service_info",
         "section":"service",
         "method":"GET",
-        "description":"Get The Details about a Service, all info and Addresses",
+        "description":"Get All The Details about a Service, all info, Addresses,Phones",
         "parameters":[
             {
                 "paramName":"serviceID",
@@ -103,33 +214,438 @@
             } 
         ],
         "requestExample":{
-            "serviceID":5
+            "serviceID":1
+        },
+        "responseExample":{
+            "id": 1,
+            "name": "مساعدات مادية و مشورة وإعادة التقييم ",
+            "description": null,
+            "free": true,
+            "target": "اللاجئين من جميع الجنسيات والمسجلين في المفوضية\r",
+            "email": "",
+            "facebook_page": null,
+            "website": "",
+            "provider": {
+                "id": 25,
+                "name": "كاريتاس مصر",
+                "image": "https://www11.0zz0.com/2024/07/13/08/168900831.png\r",
+                "description": null
+            },
+            "type": {
+                "id": 2,
+                "name": "خدمات مجتمعية"
+            },
+            "addresses": [
+                {
+                    "id": 1,
+                    "name": "الإسكندرية : 26 شارع طلعت نعمان، الغرفة التجارية، محطة الرمل، الدور الثالث\r",
+                    "city": "الإسكندرية",
+                    "working_hours": "الأحد – الخميس  8:30 ص – 3:30 م\r",
+                    "lat": "31 .20043",
+                    "lng": "29.89819\r",
+                    "phones": [
+                        {
+                            "id": 1,
+                            "phone": "الخط الساخن: 15946\r"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "دمياط  الجديدة ا لحي الاول المجاورة الاولى \r",
+                    "city": "دمياط",
+                    "working_hours": "يوميا (الاحد الى الخميس من 9:00 ص-4:00م)\r",
+                    "lat": "31.43007081",
+                    "lng": "31.68723769\r",
+                    "phones": [
+                        {
+                            "id": 2,
+                            "phone": "0020 1029958156\r"
+                        }
+                    ]
+                }
+            ]
+        },
+        "responseDescription":"Receives Info of a Service if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/cities",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Cities in the System",
+        
+        "responseExample":[
+            "الإسكندرية",
+            "دمياط",
+            "الجيزة"
+        ],
+        "responseDescription":"Receives The List of Cities if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services_search",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List With general Info With Search Filters",
+        "parameters":[
+            {
+                "paramName":"searchQuery",
+                "paramType":"String",
+                "paramDescription":"The Search Text The User Entered"
+            },
+            {
+                "paramName":"city",
+                "paramType":"string",
+                "paramDescription":"(optional) The Name of the City to Filter With it"
+            },
+            {
+                "paramName":"free",
+                "paramType":"boolean",
+                "paramDescription":"(optional) if We Need To Filter Free or Paid Services"
+            } 
+        ],
+        "requestExample":{
+            "searchQuery":"مساعدات",
+            "city":"cairo"
         },
         "responseExample":[
             {
                 "id": 1,
-                "name": "صيدلية العزبي",
-                "image": "http://",
-                "description": "هي صيدليات متخصصة في بيع و توفير جميع انواع الادوية حتي النادر منها و هي منتشرة في جميع محافظات مصر",
+                "name": "مساعدات مادية و مشورة وإعادة التقييم ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين من جميع الجنسيات والمسجلين في المفوضية\r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 4,
+                "name": "مساعدات عينية ( مبالغ نقدية - بطانيات - طعام - اثاث )",
+                "description": null,
+                "free": true,
+                "target": "الأسر الاكثر احتياجا \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 6,
+                "name": "مساعدات عينية لبعض الأسر المستضعفة",
+                "description": null,
+                "free": true,
+                "target": "جميع  الجنسيات \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 9,
+                "name": "مساعدات مادية طارئة",
+                "description": null,
+                "free": true,
+                "target": "جميع الجنسيات اللاجئة \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 10,
+                "name": "مساعدات عينية - غذائية",
+                "description": null,
+                "free": true,
+                "target": "للوافدين واللاجئين \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 14,
+                "name": "مساعدات غذائية وعينية",
+                "description": null,
+                "free": true,
+                "target": "الجنسية السودانية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            }
+        ],
+        "responseDescription":"Receives The List of Services Filterd By Search Query and Filters if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services_search_full_info",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List With All Info With Search Filters",
+        "parameters":[
+            {
+                "paramName":"searchQuery",
+                "paramType":"String",
+                "paramDescription":"The Search Text The User Entered"
+            },
+            {
+                "paramName":"city",
+                "paramType":"string",
+                "paramDescription":"(optional) The Name of the City to Filter With it"
+            },
+            {
+                "paramName":"free",
+                "paramType":"boolean",
+                "paramDescription":"(optional) if We Need To Filter Free or Paid Services"
+            } 
+        ],
+        "requestExample":{
+            "searchQuery":"مساعدات",
+            "city":"cairo"
+        },
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "مساعدات مادية و مشورة وإعادة التقييم ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين من جميع الجنسيات والمسجلين في المفوضية\r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
                 "addresses": [
                     {
                         "id": 1,
-                        "name": "عنوان رقم 1",
-                        "city": "cairo",
-                        "gpsLocation": "http://",
-                        "phone": "011"
-                    },
+                        "name": "الإسكندرية : 26 شارع طلعت نعمان، الغرفة التجارية، محطة الرمل، الدور الثالث\r",
+                        "city": "الإسكندرية",
+                        "working_hours": "الأحد – الخميس  8:30 ص – 3:30 م\r",
+                        "lat": "31 .20043",
+                        "lng": "29.89819\r",
+                        "phones": [
+                            {
+                                "id": 1,
+                                "phone": "الخط الساخن: 15946\r"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "مساعدات عينية ( مبالغ نقدية - بطانيات - طعام - اثاث )",
+                "description": null,
+                "free": true,
+                "target": "الأسر الاكثر احتياجا \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "addresses": [
                     {
-                        "id": 2,
-                        "name": "عنوان رقم 2",
-                        "city": "alex",
-                        "gpsLocation": "http://",
-                        "phone": "011"
+                        "id": 6,
+                        "name": "العجمي اكتوبر النخيل شارع 12 \\33\r",
+                        "city": "الإسكندرية",
+                        "working_hours": " يوميا (من السبت للخميس 8:00 ص -2:00م ) \r",
+                        "lat": "31.08623178",
+                        "lng": "29.73030364\r",
+                        "phones": [
+                            {
+                                "id": 8,
+                                "phone": " 0020 111 604 4223\r"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "مساعدات عينية لبعض الأسر المستضعفة",
+                "description": null,
+                "free": true,
+                "target": "جميع  الجنسيات \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "addresses": [
+                    {
+                        "id": 8,
+                        "name": "14 جمال عبد الناصر،, سيدي بشر قبلي، قسم ثان المنتزة، الإسكندرية3\r",
+                        "city": "الإسكندرية",
+                        "working_hours": "يوميا (من الاحد للخميس  9:00ص-5:00 م )\r",
+                        "lat": "31.26424556",
+                        "lng": "29.99605987\r",
+                        "phones": [
+                            {
+                                "id": 10,
+                                "phone": " 0020 1227145256\r"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "name": "مساعدات مادية طارئة",
+                "description": null,
+                "free": true,
+                "target": "جميع الجنسيات اللاجئة \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "addresses": [
+                    {
+                        "id": 11,
+                        "name": " الاسكندرية مدينة فيصل عمارة 89\r",
+                        "city": "الإسكندرية",
+                        "working_hours": "يوميا من 9:00ص- 9:00م\r",
+                        "lat": "31 .26302",
+                        "lng": "30.00034\r",
+                        "phones": [
+                            {
+                                "id": 13,
+                                "phone": "0020 1145602841\r"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "name": "مساعدات عينية - غذائية",
+                "description": null,
+                "free": true,
+                "target": "للوافدين واللاجئين \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "addresses": [
+                    {
+                        "id": 12,
+                        "name": " الاسكندرية سيدي بشر- جمال عبد الناصر-42 خلف دار عيسى\r",
+                        "city": "الإسكندرية",
+                        "working_hours": "يوميا (السبت الى الخميس 9:00 ص-3:00 م\r",
+                        "lat": "31.25683656",
+                        "lng": "29.98438432\r",
+                        "phones": [
+                            {
+                                "id": 14,
+                                "phone": " 0020 1027638335\r"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "name": "مساعدات غذائية وعينية",
+                "description": null,
+                "free": true,
+                "target": "الجنسية السودانية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "addresses": [
+                    {
+                        "id": 16,
+                        "name": " الاسكندرية ش المأذون خلف محمد نجيب \r",
+                        "city": "الإسكندرية",
+                        "working_hours": "يوميا (السبت الى الخميس 9:00ص-3:00م)\r",
+                        "lat": "31.25258929",
+                        "lng": "29.9846265\r",
+                        "phones": [
+                            {
+                                "id": 18,
+                                "phone": " 0020 10049782814\r"
+                            }
+                        ]
                     }
                 ]
             }
         ],
-        "responseDescription":"Receives Info of a Service if every Thing Went Well, or one of the Common Errors"
+        "responseDescription":"Receives The List of Services Filterd By Search Query and Filters if every Thing Went Well, or one of the Common Errors"
+    },
+    {
+        "endpoint":"/services_type_search",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List Related to a Type With general Info With Search Filters",
+        "parameters":[
+            {
+                "paramName":"searchQuery",
+                "paramType":"String",
+                "paramDescription":"The Search Text The User Entered"
+            },
+            {
+                "paramName":"city",
+                "paramType":"string",
+                "paramDescription":"(optional) The Name of the City to Filter With it"
+            },
+            {
+                "paramName":"free",
+                "paramType":"boolean",
+                "paramDescription":"(optional) if We Need To Filter Free or Paid Services"
+            } 
+        ],
+        "requestExample":{
+            "searchQuery":"مساعدات",
+            "city":"cairo"
+        },
+        "responseExample":[
+            {
+                "id": 1,
+                "name": "مساعدات مادية و مشورة وإعادة التقييم ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين من جميع الجنسيات والمسجلين في المفوضية\r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 4,
+                "name": "مساعدات عينية ( مبالغ نقدية - بطانيات - طعام - اثاث )",
+                "description": null,
+                "free": true,
+                "target": "الأسر الاكثر احتياجا \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 6,
+                "name": "مساعدات عينية لبعض الأسر المستضعفة",
+                "description": null,
+                "free": true,
+                "target": "جميع  الجنسيات \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 9,
+                "name": "مساعدات مادية طارئة",
+                "description": null,
+                "free": true,
+                "target": "جميع الجنسيات اللاجئة \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 10,
+                "name": "مساعدات عينية - غذائية",
+                "description": null,
+                "free": true,
+                "target": "للوافدين واللاجئين \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            },
+            {
+                "id": 14,
+                "name": "مساعدات غذائية وعينية",
+                "description": null,
+                "free": true,
+                "target": "الجنسية السودانية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": ""
+            }
+        ],
+        "responseDescription":"Receives The List of Services Filterd By Search Query and Filters if every Thing Went Well, or one of the Common Errors"
     }
     
 ]
