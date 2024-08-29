@@ -122,20 +122,7 @@
                         "working_hours": "الأحد – الخميس  9:00 ص – 3:00 م\r",
                         "lat": "30.04286927",
                         "lng": "31.21193463\r",
-                        "phones": [
-                            {
-                                "id": 3,
-                                "phone": "0225299830"
-                            },
-                            {
-                                "id": 4,
-                                "phone": "01023646706"
-                            },
-                            {
-                                "id": 5,
-                                "phone": "08005555222"
-                            }
-                        ]
+                        "phone": "0225299830   01023646706  08005555222"
                     }
                 ]
             }
@@ -146,16 +133,22 @@
         "endpoint":"/services",
         "section":"service",
         "method":"GET",
-        "description":"Get All Services List with General Info",
+        "description":"Get All Services List with General Info according to The Provider and Selected Type",
         "parameters":[
             {
                 "paramName":"providerID",
                 "paramType":"Number",
                 "paramDescription":"The Selected Provider"
-            }    
+            }, 
+            {
+                "paramName":"typeID",
+                "paramType":"Number",
+                "paramDescription":"The Selected Type"
+            } 
         ],
         "requestExample":{
-            "providerID":5
+            "providerID":5,
+            "typeID":2
         },
         "responseExample":[
             {
@@ -205,7 +198,7 @@
         "endpoint":"/service_info",
         "section":"service",
         "method":"GET",
-        "description":"Get All The Details about a Service, all info, Addresses,Phones",
+        "description":"Get All The Details about a Service, all info, Addresses,Phone Number",
         "parameters":[
             {
                 "paramName":"serviceID",
@@ -243,12 +236,7 @@
                     "working_hours": "الأحد – الخميس  8:30 ص – 3:30 م\r",
                     "lat": "31 .20043",
                     "lng": "29.89819\r",
-                    "phones": [
-                        {
-                            "id": 1,
-                            "phone": "الخط الساخن: 15946\r"
-                        }
-                    ]
+                    "phone": " 0020 10049782814\r"
                 },
                 {
                     "id": 2,
@@ -257,12 +245,8 @@
                     "working_hours": "يوميا (الاحد الى الخميس من 9:00 ص-4:00م)\r",
                     "lat": "31.43007081",
                     "lng": "31.68723769\r",
-                    "phones": [
-                        {
-                            "id": 2,
-                            "phone": "0020 1029958156\r"
-                        }
-                    ]
+                    "phone": "0020 1029958156\r"
+
                 }
             ]
         },
@@ -415,12 +399,8 @@
                         "working_hours": "الأحد – الخميس  8:30 ص – 3:30 م\r",
                         "lat": "31 .20043",
                         "lng": "29.89819\r",
-                        "phones": [
-                            {
-                                "id": 1,
-                                "phone": "الخط الساخن: 15946\r"
-                            }
-                        ]
+                        "phone": "الخط الساخن: 15946\r"
+
                     }
                 ]
             },
@@ -441,12 +421,8 @@
                         "working_hours": " يوميا (من السبت للخميس 8:00 ص -2:00م ) \r",
                         "lat": "31.08623178",
                         "lng": "29.73030364\r",
-                        "phones": [
-                            {
-                                "id": 8,
-                                "phone": " 0020 111 604 4223\r"
-                            }
-                        ]
+                        "phone": " 0020 111 604 4223\r"
+
                     }
                 ]
             },
@@ -467,12 +443,8 @@
                         "working_hours": "يوميا (من الاحد للخميس  9:00ص-5:00 م )\r",
                         "lat": "31.26424556",
                         "lng": "29.99605987\r",
-                        "phones": [
-                            {
-                                "id": 10,
-                                "phone": " 0020 1227145256\r"
-                            }
-                        ]
+                        "phone": " 0020 1227145256\r"
+
                     }
                 ]
             },
@@ -493,12 +465,8 @@
                         "working_hours": "يوميا من 9:00ص- 9:00م\r",
                         "lat": "31 .26302",
                         "lng": "30.00034\r",
-                        "phones": [
-                            {
-                                "id": 13,
-                                "phone": "0020 1145602841\r"
-                            }
-                        ]
+                        "phone": "0020 1145602841\r"
+
                     }
                 ]
             },
@@ -519,12 +487,8 @@
                         "working_hours": "يوميا (السبت الى الخميس 9:00 ص-3:00 م\r",
                         "lat": "31.25683656",
                         "lng": "29.98438432\r",
-                        "phones": [
-                            {
-                                "id": 14,
-                                "phone": " 0020 1027638335\r"
-                            }
-                        ]
+                        "phone": " 0020 1027638335\r"
+
                     }
                 ]
             },
@@ -545,12 +509,8 @@
                         "working_hours": "يوميا (السبت الى الخميس 9:00ص-3:00م)\r",
                         "lat": "31.25258929",
                         "lng": "29.9846265\r",
-                        "phones": [
-                            {
-                                "id": 18,
-                                "phone": " 0020 10049782814\r"
-                            }
-                        ]
+                        "phone": " 0020 10049782814\r"
+
                     }
                 ]
             }
