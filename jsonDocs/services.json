@@ -89,10 +89,16 @@
                 "paramName":"providerID",
                 "paramType":"Number",
                 "paramDescription":"The Selected Provider"
-            }    
+            }, 
+            {
+                "paramName":"typeID",
+                "paramType":"Number",
+                "paramDescription":"The Selected Type"
+            }     
         ],
         "requestExample":{
-            "providerID":11
+            "providerID":11,
+            "typeID":2
         },
         "responseExample":[
             {
