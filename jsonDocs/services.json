@@ -137,6 +137,57 @@
         "responseDescription":"Receives The List of Services if every Thing Went Well, or one of the Common Errors"
     },
     {
+        "endpoint":"/services_full_without_type",
+        "section":"service",
+        "method":"GET",
+        "description":"Get All Services List For a Provider With All Details Without Type",
+        "parameters":[
+            {
+                "paramName":"providerID",
+                "paramType":"Number",
+                "paramDescription":"The Selected Provider"
+            }    
+        ],
+        "requestExample":{
+            "providerID":11
+        },
+        "responseExample":[
+            {
+                "id": 2,
+                "name": "قسائم غذائية ",
+                "description": null,
+                "free": true,
+                "target": "اللاجئين الأكثر احتياجاً وأولئك الذين يعانون من انعدام الأمن الغذائي المسجلين لدى المفوضية \r",
+                "email": "",
+                "facebook_page": null,
+                "website": "",
+                "provider": {
+                    "id": 11,
+                    "name": "برنامج الغذاء العالمي WFP",
+                    "image": "https://www12.0zz0.com/2024/07/13/10/516354618.png\r",
+                    "description": null
+                },
+                "type": {
+                    "id": 2,
+                    "name": "خدمات مجتمعية"
+                },
+                "addresses": [
+                    {
+                        "id": 3,
+                        "name": "الدقي",
+                        "city": "الجيزة",
+                        "working_hours": "الأحد – الخميس  9:00 ص – 3:00 م\r",
+                        "lat": "30.04286927",
+                        "lng": "31.21193463\r",
+                        "location": "https://www.google.com/maps?q=31.2777980193669,30.011988262467",
+                        "phone": "0225299830   01023646706  08005555222"
+                    }
+                ]
+            }
+        ],
+        "responseDescription":"Receives The List of Services if every Thing Went Well, or one of the Common Errors"
+    },
+    {
         "endpoint":"/services",
         "section":"service",
         "method":"GET",
