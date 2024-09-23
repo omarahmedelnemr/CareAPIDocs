@@ -393,12 +393,12 @@
         "parameters":[
             {
                 "paramName":"searchQuery",
-                "paramType":"String",
+                "paramType":"String (255)",
                 "paramDescription":"The Search Text The User Entered"
             },
             {
                 "paramName":"city",
-                "paramType":"string",
+                "paramType":"String (255)",
                 "paramDescription":"(optional) The Name of the City to Filter With it"
             },
             {
@@ -483,12 +483,12 @@
         "parameters":[
             {
                 "paramName":"searchQuery",
-                "paramType":"String",
+                "paramType":"String (255)",
                 "paramDescription":"The Search Text The User Entered"
             },
             {
                 "paramName":"city",
-                "paramType":"string",
+                "paramType":"String (255)",
                 "paramDescription":"(optional) The Name of the City to Filter With it"
             },
             {
@@ -651,12 +651,12 @@
         "parameters":[
             {
                 "paramName":"searchQuery",
-                "paramType":"String",
+                "paramType":"String (255)",
                 "paramDescription":"The Search Text The User Entered"
             },
             {
                 "paramName":"city",
-                "paramType":"string",
+                "paramType":"String (255)",
                 "paramDescription":"(optional) The Name of the City to Filter With it"
             },
             {
